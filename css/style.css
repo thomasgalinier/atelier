@@ -1,0 +1,57 @@
+/* variable */
+:root{
+    --font-family: 'Rubik', sans-serif;
+    --dynamicColor: #FF5E1A;
+    --titleColor: #140A82;
+    --mainColor: #000000;
+    --yellowColor: #F6CB40;
+    --greenColor: #24A640;
+    --lightBlueColor: #00B0CC;
+    --backgroundColor: #f4f4f4;
+}
+
+
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+    font-family: var(--font-family);
+} 
+a{
+    text-decoration: none;
+    
+}
+
+/* basicStyle */
+body{
+    background-color: var(--backgroundColor);
+}
+
+/* navBar */
+
+nav{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.logoNavBar img{
+    width: 200px;
+    height: 70px;
+}
+.navBarLinks{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.navBarLink a{
+    color: var(--dynamicColor);
+}
