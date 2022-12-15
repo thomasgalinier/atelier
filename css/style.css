@@ -30,6 +30,7 @@ a{
 /* basicStyle */
 body{
     background-color: var(--backgroundColor);
+    width: 100%;
 }
 
 /* navBar */
@@ -50,8 +51,114 @@ nav{
     display: flex;
     justify-content: space-between;
     width: 40%;
+    height: 100%;
+    align-items: center;
 }
 
 .navBarLink a{
     color: var(--dynamicColor);
 }
+.burger{
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    .navBarLink a::after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background-color: var(--dynamicColor);
+        transition: .5s;
+    }
+    .navBarLink a:hover::after{
+        width: 100%;
+        transition: width .5s;
+    }  
+}
+
+@media screen and (max-width:767px) {
+
+    .navBarLinks{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 0%;
+        height: calc(100vh - 90px) ;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background-color: var(--backgroundColor);
+        align-items: flex-start;
+        overflow: hidden;
+        transition: .5s ease-in-out;
+    }
+    .navBarLinks :nth-child(1){
+        padding-top: 1.5rem;
+    }
+    .show-nav .navBarLinks{
+        width: 100%;
+    }
+    .navBarLink a{
+        display: block;
+        padding: 1rem;
+        font-size: 20px;
+        transition: all .4s ease-in-out;
+
+    }
+    .navBarLink a:hover{
+        padding-left: 2rem;
+        letter-spacing: 5px;
+    }
+    .burger{
+        display: block;
+        position:  relative;
+        padding: 0;
+        width: 45px;
+        height: 45px;
+        border: none;
+        cursor: pointer;
+        background-color: var(--backgroundColor);
+    }
+    .bar{
+        display: block;
+        width: 35px;
+        height: 4px;
+        background-color: var(--dynamicColor);
+        border-radius: 5px;
+    }
+    .bar::after, .bar::before{
+        content: '';
+        display: block;
+        width: 35px;
+        height: 4px;
+        background-color: var(--dynamicColor);
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        transition:.4s ease-in-out;
+    }
+    .bar::before{
+        transform: translateY(-12px);
+    }
+    .bar::after{
+        transform: translateY(12px);
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    
+    .show-nav .bar{
+        width: 0%;
+        background-color: transparent;
+    }
+    .show-nav .bar::before{
+        transform: rotate(45deg);
+    }
+    .show-nav .bar::after{
+        transform: rotate(-45deg);
+    }
+}
+
