@@ -31,6 +31,7 @@ a{
 body{
     background-color: var(--backgroundColor);
     width: 100%;
+    font-family: var(--font-family);
 }
 
 /* navBar */
@@ -160,5 +161,82 @@ nav{
     .show-nav .bar::after{
         transform: rotate(-45deg);
     }
+}
+
+
+
+/* carousel */
+
+.carousel1{
+    display: flex;
+    align-items: center;
+}
+.carousel1 img{
+    width: 385px;
+    height: 622px;
+}
+.maintenance{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: flex-start;
+   
+    
+}
+.maintenance h2{
+    padding-bottom: 5px;
+    padding-left: 80px;
+    font-size: 26px;
+    color: var(--titleColor);
+}
+.maintenance h4{
+    padding-bottom: 30px;
+    padding-left: 80px;
+
+}
+.maintenance p{
+    width: 80%;
+    padding-left: 80px;
+    text-align: justify;
+}
+.maintenance a {
+    margin-left: 80px;
+    margin-top: 60px;
+    color:var(--dynamicColor);
+    background-color: #ffffff;
+    width: 140px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--dynamicColor);
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    transition: all .6s ;
+
+}
+
+.maintenance a:hover{
+    color: white;
+}
+.maintenance a::before{
+    content: '';
+    position:absolute;
+    top: 47px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dynamicColor);
+    border-radius: 50% 50%  0 0;
+    transition: all .7s;
+    z-index: -1;
+}
+
+.maintenance a:hover::before{
+    top: 0;
+    border-radius: 0;
 }
 
