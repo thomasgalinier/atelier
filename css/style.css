@@ -93,12 +93,14 @@ nav{
         align-items: flex-start;
         overflow: hidden;
         transition: .5s ease-in-out;
+       
     }
     .navBarLinks :nth-child(1){
         padding-top: 1.5rem;
     }
     .show-nav .navBarLinks{
         width: 100%;
+        
     }
     .navBarLink a{
         display: block;
@@ -167,11 +169,14 @@ nav{
 
 /* carousel */
 
+
 .carousel1{
     display: flex;
+    /* display: none; */
     align-items: center;
+    z-index: 0;
 }
-.carousel1 img{
+.carousel img{
     width: 385px;
     height: 622px;
 }
@@ -179,28 +184,28 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 500px;
     align-items: flex-start;
    
     
 }
-.maintenance h2{
+.carousel h2{
     padding-bottom: 5px;
     padding-left: 80px;
     font-size: 26px;
     color: var(--titleColor);
 }
-.maintenance h4{
+.carousel h4{
     padding-bottom: 30px;
     padding-left: 80px;
 
 }
-.maintenance p{
+.carousel p{
     width: 80%;
     padding-left: 80px;
     text-align: justify;
 }
-.maintenance a {
+.boutonDecouvrir {
     margin-left: 80px;
     margin-top: 60px;
     color:var(--dynamicColor);
@@ -219,10 +224,10 @@ nav{
 
 }
 
-.maintenance a:hover{
+.boutonDecouvrir:hover{
     color: white;
 }
-.maintenance a::before{
+.boutonDecouvrir::before{
     content: '';
     position:absolute;
     top: 47px;
@@ -235,8 +240,125 @@ nav{
     z-index: -1;
 }
 
-.maintenance a:hover::before{
+.boutonDecouvrir:hover::before{
     top: 0;
     border-radius: 0;
+}
+
+
+.carousel2{
+    /* display: none; */
+    display: flex;
+    align-items: center;
+    z-index: 0;
+}
+.materiel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 800px;
+    align-items: flex-start;
+}
+.carousel3{
+    /* display: none; */
+    display: flex;
+    align-items: center;
+    z-index: 0;
+}
+.assisctance{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 800px;
+    align-items: flex-start;
+}
+
+.carousel{
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    position: static;
+}
+.carousel1, .carousel2, .carousel3{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.precedent{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute;
+    bottom: 90px;
+    right: 9%; */
+    border: 3px solid var(--dynamicColor);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.suivant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    /* position: ; */
+    /* bottom: 90px;
+    right: 2%; */
+    border: 3px solid var(--dynamicColor);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.bouton {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.slider{
+    display: none;
+}
+ .active{
+    display: flex;
+    height: 500px;
+}
+
+.aPropos{
+    display: flex;
+    /* position: relative; */
+    justify-content: center;
+}
+.aPropos div{
+    padding: 30px 0 300px 0;
+    background-color:#ffffff;
+    height: 200px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin: 30px 0 100px 200px;
+    border-radius: 10px;
+    box-shadow: 10px -10px 1px #F6CB40;
+    overflow: hidden;
+}
+
+.aPropos div p{
+    width: 400px;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+.aPropos div h1{
+    color: var(--titleColor);
+    margin-left: 30px;
+}
+
+.aPropos img{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    right: 130px;
+    top: -30px;
 }
 
