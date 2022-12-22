@@ -22,7 +22,7 @@ const precedent = document.querySelector('.precedent')
 suivant.addEventListener('click', function(){
     etape++;
     if(etape >= nombreSlider){
-        etape = 0
+        etape = 0;
     }
     enleverActiveSlide();
     slider[etape].classList.add('active');
@@ -33,6 +33,31 @@ precedent.addEventListener('click', function(){
     if(etape < 0){
         etape = 2;
     }
-    enleverActiveSlide()
-    slider[etape].classList.add('active')
+    enleverActiveSlide();
+    slider[etape].classList.add('active');
 })
+
+VanillaTilt.init(document.querySelector(".activiteMateriel"), {
+    max: 25,
+    speed: 400
+});
+
+//It also supports NodeList
+VanillaTilt.init(document.querySelectorAll(".activiteMateriel"));
+
+VanillaTilt.init(document.querySelector(".activiteMaintenance"), {
+    max: 25,
+    speed: 400
+});
+
+//It also supports NodeList
+VanillaTilt.init(document.querySelectorAll(".activiteMaintenance"));
+
+VanillaTilt.init(document.querySelector(".activiteMaintenance"), {
+    max: 25,
+    speed: 400
+});
+
+//It also supports NodeList
+VanillaTilt.init(document.querySelectorAll(".activiteInstalation"));
+

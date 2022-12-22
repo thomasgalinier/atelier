@@ -42,6 +42,9 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px;
 
 }
 .logoNavBar img{
@@ -156,6 +159,7 @@ nav{
     .show-nav .bar{
         width: 0%;
         background-color: transparent;
+
     }
     .show-nav .bar::before{
         transform: rotate(45deg);
@@ -285,15 +289,15 @@ nav{
     left: 0;
 }
 .precedent{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     /* position: absolute;
     bottom: 90px;
     right: 9%; */
-    border: 3px solid var(--dynamicColor);
+    
     border-radius: 50%;
     cursor: pointer;
 }
@@ -301,20 +305,24 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     /* position: ; */
     /* bottom: 90px;
     right: 2%; */
-    border: 3px solid var(--dynamicColor);
     border-radius: 50%;
     cursor: pointer;
+    margin-left: 50px;
 }
+
 .bouton {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
+    position: relative;
+    z-index: 0;
+    
 }
 .slider{
     display: none;
@@ -330,9 +338,9 @@ nav{
     justify-content: center;
 }
 .aPropos div{
-    padding: 30px 0 300px 0;
+    padding: 30px 0 0px 0;
     background-color:#ffffff;
-    height: 200px;
+    height: 400px;
     width: 600px;
     display: flex;
     flex-direction: column;
@@ -340,8 +348,12 @@ nav{
     position: relative;
     margin: 30px 0 100px 200px;
     border-radius: 10px;
-    box-shadow: 10px -10px 1px #F6CB40;
+    border: 2px solid var(--yellowColor);
     overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+.aPropos div:hover{
+    box-shadow: 10px -10px 1px #F6CB40;
 }
 
 .aPropos div p{
@@ -362,3 +374,40 @@ nav{
     top: -30px;
 }
 
+.aPropos a{
+    margin-bottom: 60px;
+}
+
+
+.activite{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.activite img{
+    width: 287px;
+    height: 287px;
+}
+
+.activite div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    transition: all .5s;
+    transform-style: preserve-3d;
+    padding-bottom: 50px;
+    margin: 0 20px 100px 20px;
+}
+.activite h2{
+    color: var(--titleColor);
+}
+.activite div:hover img, h2, a{
+    transform: translateZ(100px);
+}
